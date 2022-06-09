@@ -5,7 +5,16 @@ import styles from "../styles/Home.module.css";
 import styled from "styled-components";
 
 const Home: NextPage = () => {
-  return <div className={styles.container}></div>;
+  return (
+    <div>
+      <Description>Moi</Description>
+    </div>
+  );
 };
 
 export default Home;
+
+const Description = styled.p`
+  background-color: ${({ theme }) => theme.primary.green};
+  color: white;
+`;
