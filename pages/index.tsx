@@ -1,20 +1,23 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import styled from "styled-components";
+import Button from "../components/button/Button";
+import { Container } from "../components/styles/Container";
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Description>Moi</Description>
-    </div>
+    <HomeStyled>
+      <Container>
+        <Button color="primary">
+          <p>Button</p>
+        </Button>
+      </Container>
+    </HomeStyled>
   );
 };
 
 export default Home;
 
-const Description = styled.p`
+const HomeStyled = styled.main`
   background-color: ${({ theme }) => theme.primary.green};
   color: white;
 `;
