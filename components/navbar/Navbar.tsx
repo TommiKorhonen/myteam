@@ -31,6 +31,10 @@ const Navbar = () => {
 export default Navbar;
 
 const Nav = styled.nav`
+  width: 100%;
+  max-width: 1100px;
+  position: fixed;
+  top: 0;
   margin-top: 73px;
   display: flex;
   align-items: center;
