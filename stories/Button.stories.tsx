@@ -1,41 +1,35 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+// Button.stories.ts|tsx
 
-import { Button } from './Button';
+import React from "react";
+import { theme } from "../components/styles/theme";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+import Button from "../components/button/Button";
+import styled, { ThemeProvider } from "styled-components";
+import GlobalStyles from "../components/styles/Global";
+
 export default {
-  title: 'Example/Button',
+  title: "Button",
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as ComponentMeta<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+//👇 We create a “template” of how args map to rendering
+const Template: ComponentStory<typeof Button> = (args) => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyles />
+    <Flex>
+      <Button {...args} />
+    </Flex>
+  </ThemeProvider>
+);
 
 export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
+// Primary.args = {
+//   color: "primary",
+// };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+const Flex = styled.div`
+  display: flex;
+  gap: 1rem;
+`;

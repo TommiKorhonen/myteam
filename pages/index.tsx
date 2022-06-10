@@ -7,9 +7,8 @@ const Home: NextPage = () => {
   return (
     <HomeStyled>
       <Container>
-        <Button color="primary">
-          <p>Button</p>
-        </Button>
+        <Button color="primary" />
+        <Button href="/about" color="primary" />
       </Container>
     </HomeStyled>
   );

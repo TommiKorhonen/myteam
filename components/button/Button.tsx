@@ -7,15 +7,28 @@ type ButtonProps = {
   children?: React.ReactNode;
   color?: "primary" | "secondary";
   disabled?: boolean;
+  label?: string;
 };
 
-const Button = ({ href, children, color, disabled, onClick }: ButtonProps) => {
+const Button = ({
+  href,
+  children,
+  color = "primary",
+  disabled,
+  onClick,
+  label,
+}: ButtonProps) => {
   if (href) {
-    return <Link href={href}>{children}</Link>;
+    return (
+      <Link href={href} passHref>
+        <BtnLink color={color}>{label}</BtnLink>
+      </Link>
+    );
   }
+
   return (
     <Btn title="test" onClick={onClick} type="button" color={color}>
-      {children}
+      {label}
     </Btn>
   );
 };
@@ -26,20 +39,38 @@ const COLOR = {
   primary: css`
     color: #fff;
     background-color: transparent;
+    border: 2px solid #ffffff;
+
+    &:hover {
+      background-color: white;
+      color: ${({ theme }) => theme.secondary.darkGreen};
+    }
   `,
   secondary: css`
-    color: #000;
-    background: linear-gradient(#c7c7d2, #bcbaba);
+    background-color: white;
+    color: ${({ theme }) => theme.secondary.darkGreen};
+    &:hover {
+      background-color: ${({ theme }) => theme.secondary.raptureBlue};
+    }
   `,
 };
 export const Btn = styled.button<ButtonProps>`
-  padding: 10px 2rem;
+  padding: 10px 32px;
   cursor: pointer;
-  font-weight: 500;
-  outline: none;
+  border: none;
   transition: all 0.2s;
-  border: 2px solid #ffffff;
   border-radius: 24px;
-
+  font-weight: 600;
+  font-size: 18px;
+  ${(props) => props.color && COLOR[props.color]}
+`;
+export const BtnLink = styled.a<ButtonProps>`
+  padding: 10px 32px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 18px;
   ${(props) => props.color && COLOR[props.color]}
 `;
