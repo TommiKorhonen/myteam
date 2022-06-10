@@ -6,13 +6,18 @@ const GlobalStyles = createGlobalStyle`
       margin: 0;
       padding: 0;
     }
-    p{
+    body {
+      background-color: #014E56;
       font-weight: 600;
       font-size: 18px;
       line-height: 28px;
     }
+    li{
+    list-style: none;
+    }
     a{
       text-decoration:none;
+      color: white;
     }
     a,button {
     font-family: "Livvic", sans-serif;
