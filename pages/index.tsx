@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import styled from "styled-components";
 import Header from "../components/header/Header";
 import HomeInfo from "../components/main/HomeInfo";
+import Testimonials from "../components/main/Testimonials";
 
 const Home: NextPage = () => {
   return (
@@ -9,6 +10,7 @@ const Home: NextPage = () => {
       <Header />
       <HomeStyled>
         <HomeInfo />
+        <Testimonials />
       </HomeStyled>
     </>
   );

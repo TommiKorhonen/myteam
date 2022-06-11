@@ -18,7 +18,7 @@ const Navbar = () => {
           </ListItem>
         </List>
         <div>
-          <Button label="contact us" />
+          <Button href="/contact" label="contact us" />
         </div>
       </Nav>
     </Container>

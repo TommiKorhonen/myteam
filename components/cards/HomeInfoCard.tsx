@@ -32,4 +32,7 @@ const Heading = styled.p`
 `;
 const Description = styled.p`
   color: white;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
 `;
