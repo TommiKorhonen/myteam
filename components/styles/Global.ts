@@ -20,6 +20,11 @@ const GlobalStyles = createGlobalStyle`
       font-size: 100px;
       line-height: 100px;
     }
+    h2{
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 48px;
+    }
     a{
       text-decoration:none;
       color: white;

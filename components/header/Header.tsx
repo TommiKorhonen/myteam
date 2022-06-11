@@ -7,7 +7,7 @@ const Header = () => {
       <LeftShapes>
         <img src="/images/bg-pattern-home-1.svg" alt="Your Name" />
       </LeftShapes>
-      <header>
+      <StyleHeader>
         <Container>
           <Layout>
             <TextContent>
@@ -28,13 +28,15 @@ const Header = () => {
             </BottomShapes>
           </Layout>
         </Container>
-      </header>
+      </StyleHeader>
     </>
   );
 };
 
 export default Header;
-
+const StyleHeader = styled.header`
+  overflow: hidden;
+`;
 const TextContent = styled.section`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
