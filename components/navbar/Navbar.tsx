@@ -34,6 +34,7 @@ const Nav = styled.nav`
   width: 100%;
   max-width: 1100px;
   position: fixed;
+  z-index: 100;
   top: 0;
   margin-top: 73px;
   display: flex;

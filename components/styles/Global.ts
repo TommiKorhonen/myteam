@@ -13,14 +13,22 @@ const GlobalStyles = createGlobalStyle`
       line-height: 28px;
     }
     li{
-    list-style: none;
+      list-style: none;
+    }
+    h1{
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 100px;
     }
     a{
       text-decoration:none;
       color: white;
     }
     a,button {
-    font-family: "Livvic", sans-serif;
+      font-family: "Livvic", sans-serif;
+    }
+    p{
+      max-width: 60ch;
     }
 `;
 
