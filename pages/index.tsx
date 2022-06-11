@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
+import CallToAction from "../components/call-to-action/CallToAction";
 import Header from "../components/header/Header";
 import HomeInfo from "../components/main/HomeInfo";
 import Testimonials from "../components/main/Testimonials";
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
       <HomeStyled>
         <HomeInfo />
         <Testimonials />
+        <CallToAction />
       </HomeStyled>
     </>
   );
