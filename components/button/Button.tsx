@@ -5,7 +5,7 @@ type ButtonProps = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; // to handle onClick functions
   href?: string;
   children?: React.ReactNode;
-  color?: "primary" | "secondary";
+  color?: "primary" | "secondary" | "primary_dark";
   disabled?: boolean;
   label?: string;
 };
@@ -27,7 +27,7 @@ const Button = ({
   }
 
   return (
-    <Btn title="test" onClick={onClick} type="button" color={color}>
+    <Btn onClick={onClick} type="button" color={color}>
       {label}
     </Btn>
   );
@@ -51,6 +51,15 @@ const COLOR = {
     color: ${({ theme }) => theme.secondary.darkGreen};
     &:hover {
       background-color: ${({ theme }) => theme.secondary.raptureBlue};
+    }
+  `,
+  primary_dark: css`
+    background-color: transparent;
+    color: ${({ theme }) => theme.secondary.stateGreen};
+    border: 2px solid ${({ theme }) => theme.secondary.stateGreen};
+    &:hover {
+      background-color: ${({ theme }) => theme.secondary.stateGreen};
+      color: white;
     }
   `,
 };
