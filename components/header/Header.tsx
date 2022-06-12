@@ -62,7 +62,7 @@ const GrayBlock = styled.div`
 `;
 const Layout = styled.div`
   position: relative;
-  height: 100vh;
+  height: 700px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -74,7 +74,7 @@ const BottomShapes = styled.div`
   position: absolute;
 `;
 const LeftShapes = styled.div`
-  top: 39%;
+  top: 350px;
   /* bottom: 10%; */
   left: -100px;
   position: absolute;

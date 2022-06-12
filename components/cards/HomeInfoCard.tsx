@@ -35,4 +35,5 @@ const Description = styled.p`
   font-weight: 600;
   font-size: 15px;
   line-height: 25px;
+  opacity: 0.8;
 `;
