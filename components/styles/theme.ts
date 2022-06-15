@@ -13,4 +13,5 @@ export const theme = {
   sm: "640px",
   md: "768px",
   lg: "1024px",
+  xL: "1440px",
 };
