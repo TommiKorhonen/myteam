@@ -61,6 +61,7 @@ const ContentRight = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: end;
+  width: 100%;
 `;
 const Description = styled.p`
   font-weight: 600;
