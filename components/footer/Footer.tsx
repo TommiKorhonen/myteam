@@ -50,6 +50,9 @@ const Navigation = styled.div`
     display: flex;
     gap: 40px;
   }
+  a:hover {
+    color: ${({ theme }) => theme.primary.coral};
+  }
 `;
 const ContentLeft = styled.div`
   display: flex;
@@ -78,4 +81,8 @@ const Icons = styled.div`
   display: flex;
   cursor: pointer;
   gap: 1rem;
+  img:hover {
+    filter: invert(67%) sepia(12%) saturate(6961%) hue-rotate(313deg)
+      brightness(108%) contrast(93%);
+  }
 `;

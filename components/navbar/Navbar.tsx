@@ -47,5 +47,8 @@ const List = styled.ul`
   color: white;
   margin-left: 80px;
   margin-right: auto;
+  a:hover {
+    color: ${({ theme }) => theme.primary.coral};
+  }
 `;
 const ListItem = styled.li``;
